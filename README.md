@@ -172,8 +172,7 @@ Application URL
 ```
 http://localhost:8082
 ```
-Deploy Application URL:
-https://student-management-system-0vb5.onrender.com
+
 
 ---
 
@@ -198,7 +197,7 @@ Password : admin123
 - Responsive Sidebar
 - Search Functionality
 
-> Add screenshots inside a `screenshots/` folder and reference them here.
+>  screenshots inside a `screenshots/` folder and reference them here.
 
 Example:
 
