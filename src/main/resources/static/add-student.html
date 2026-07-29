@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Student</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf1ff,
+                    #ffffff
+                );
+
+            padding: 35px;
+        }
+
+
+        .container {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 35px
+                rgba(41, 72, 152, 0.18);
+        }
+
+
+        h1 {
+
+            color: #294898;
+
+            margin-bottom: 30px;
+
+            text-align: center;
+        }
+
+
+        .form-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 22px;
+        }
+
+
+        .form-group {
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+
+        label {
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+            color: #333;
+        }
+
+
+        input,
+        select {
+
+            padding: 13px;
+
+            border: 1px solid #ccd3e0;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+
+        input:focus,
+        select:focus {
+
+            border-color: #294898;
+
+            box-shadow:
+                0 0 5px
+                rgba(41, 72, 152, 0.3);
+        }
+
+
+        .buttons {
+
+            margin-top: 30px;
+
+            display: flex;
+
+            gap: 15px;
+        }
+
+
+        button {
+
+            background: #294898;
+
+            color: white;
+
+            border: none;
+
+            padding: 14px 28px;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+
+        button:hover {
+
+            background: #1e397c;
+        }
+
+
+        .back-btn {
+
+            background: #555;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 14px 28px;
+
+            border-radius: 8px;
+        }
+
+
+        @media (max-width: 700px) {
+
+            .form-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <h1>➕ Add Student</h1>
+
+
+    <form action="/students/save"
+          method="post">
+
+
+        <div class="form-grid">
+
+
+            <div class="form-group">
+
+                <label>
+                    Admission Number
+                </label>
+
+                <input type="text"
+                       name="admissionNumber"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Department
+                </label>
+
+                <input type="text"
+                       name="department"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    First Name
+                </label>
+
+                <input type="text"
+                       name="firstName"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Last Name
+                </label>
+
+                <input type="text"
+                       name="lastName"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Age
+                </label>
+
+                <input type="number"
+                       name="age"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Gender
+                </label>
+
+                <select name="gender"
+                        required>
+
+                    <option value="">
+                        Select Gender
+                    </option>
+
+                    <option value="Male">
+                        Male
+                    </option>
+
+                    <option value="Female">
+                        Female
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input type="email"
+                       name="email"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input type="text"
+                       name="phoneNumber"
+                       required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Academic Year
+                </label>
+
+                <input type="text"
+                       name="academicYear"
+                       placeholder="Example: 2025-2026"
+                       required>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="buttons">
+
+
+            <button type="submit">
+
+                Save Student
+
+            </button>
+
+
+            <a href="/admin.html"
+               class="back-btn">
+
+                Back to Dashboard
+
+            </a>
+
+
+        </div>
+
+
+    </form>
+
+
+</div>
+
+
+</body>
+
+</html>
