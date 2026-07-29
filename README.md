@@ -172,6 +172,8 @@ Application URL
 ```
 http://localhost:8082
 ```
+Deploy Application URL:
+https://student-management-system-0vb5.onrender.com
 
 ---
 
